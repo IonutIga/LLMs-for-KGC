@@ -1,0 +1,72 @@
+insert an employee with name as Michael and role as CEO*entity|hasName|hasRole*employee|Michael|CEO*insert*S
+insert a project with code as 123 manager is John Travolta class is Python and name is Taskmate*entity|hasCode|hasManager|hasClass|hasName*project|123|John Travolta|Python|Taskmate*insert*S
+insert a project with code as 123, status is finished, manager is John Travolta, class is Python and name is Taskmate*entity|hasCode|hasStatus|hasManager|hasClass|hasName*project|123|finished|John Travolta|Python|Taskmate*insert*SC
+i want you to insert a project instance with code being A9I its class is C named BestApp and put Robert as the manager*entity|hasCode|hasClass|hasName|hasManager*project|A9I|C|BestApp|Robert*insert*MPS
+i want you to insert a project instance with code being A9I, its class is C, named BestApp and put Robert as the manager*entity|hasCode|hasClass|hasName|hasManager*project|A9I|C|BestApp|Robert*insert*MPSC
+please create a project called BestApp make its code 78E managed by Michael and put it with other Java projects*entity|hasName|hasCode|hasManager|hasClass*project|BestApp|78E|Michael|Java*insert*HPS
+please create a project called BestApp, make its code 78E, managed by Michael and put it with other Java projects*entity|hasName|hasCode|hasManager|hasClass*project|BestApp|78E|Michael|Java*insert*HPSC
+insert an employee with nae as Michael and rle as CEO*entity|hasName|hasRole*employee|Michael|CEO*insert*WPS
+insert a project with code as 123 mnager is John Travolta status is in-progress clas is Python and name is Taskmate*entity|hasCode|hasManager|hasStatus|hasClass|hasName*project|123|John Travolta|in-progress|Python|Taskmate*insert*WPS
+insert a project with code as 123, mnager is John Travolta, clas is Python and name is Taskmate*entity|hasCode|hasManager|hasClass|hasName*project|123|John Travolta|Python|Taskmate*insert*WPSC
+insert a project with code as PA98 manager is Spik Duvsini class is Python and name is Taskmate*entity|hasCode|hasManager|hasClass|hasName*project|PA98|Spik Duvsini|Python|Taskmate*insert*WVS
+insert a project with code as PA98, manager is Spik Duvsini, class is Python and name is Taskmate*entity|hasCode|hasManager|hasClass|hasName*project|PA98|Spik Duvsini|Python|Taskmate*insert*WVSC
+add a project with code as 123 manager is John Travolta class is Python and name is Taskmate*entity|hasCode|hasManager|hasClass|hasName*project|123|John Travolta|Python|Taskmate*insert*SS
+add a project with code as 123, manager is John Travolta, class is Python and name is Taskmate*entity|hasCode|hasManager|hasClass|hasName*project|123|John Travolta|Python|Taskmate*insert*SSC
+add a project with code as 123 mnager is John Travolta clas is Python and name is Taskmate*entity|hasCode|hasManager|hasClass|hasName*project|123|John Travolta|Python|Taskmate*insert*WPSS
+add a project with code as 123, mnager is John Travolta, clas is Python and name is Taskmate*entity|hasCode|hasManager|hasClass|hasName*project|123|John Travolta|Python|Taskmate*insert*WPSSC
+i want you to add a project instance with coe being A9I its klass is C named BestApp and put Robert as the manager*entity|hasCode|hasClass|hasName|hasManager*project|A9I|C|BestApp|Robert*insert*WPMPSS
+i want you to add a project instance with coe being A9I, its klass is C, stats is developed named BestApp and put Robert as the manager*entity|hasCode|hasClass|hasStatus|hasName|hasManager*project|A9I|C|developed|BestApp|Robert*insert*WPMPSSC
+please put a project called BestApp make its code 78E manaed by Michael and pt it with other Java projects*entity|hasName|hasCode|hasManager|hasClass*project|BestApp|78E|Michael|Java*insert*WPHPSS
+please put a project called BestApp, make its code 78E, manaed by Michael and pt it with other Java projects*entity|hasName|hasCode|hasManager|hasClass*project|BestApp|78E|Michael|Java*insert*WPHPSSC
+add a project with code as PA98 manager is Spik Duvsini class is Python and name is Taskmate*entity|hasCode|hasManager|hasClass|hasName*project|PA98|Spik Duvsini|Python|Taskmate*insert*WVSS
+add a project with code as PA98, manager is Spik Duvsini, class is Python and name is Taskmate*entity|hasCode|hasManager|hasClass|hasName*project|PA98|Spik Duvsini|Python|Taskmate*insert*WVSSC
+i want you to add a project instance with code being AWW9I its class is C named Co-lectia and put Robert as the manager*entity|hasCode|hasClass|hasName|hasManager*project|AWW9I|C|Co-lectia|Robert*insert*WVMPSS
+i want you to add a project instance with code being AWW9I, its class is C, named Co-lectia and put Robert as the manager*entity|hasCode|hasClass|hasName|hasManager*project|AWW9I|C|Co-lectia|Robert*insert*WVMPSSC
+please put a project called OatAction make its code 7-8E managed by Michael and put it with other SQL and PLSQL projects*entity|hasName|hasCode|hasManager|hasClass*project|OatAction|7-8E|Michael|SQL and PLSQL*insert*WVHPSS
+please put a project called OatAction, make its code 7-8E, managed by Michael and put it with other SQL and PLSQL projects*entity|hasName|hasCode|hasManager|hasClass*project|OatAction|7-8E|Michael|SQL and PLSQL*insert*WVHPSSC
+please create a project called BestApp make its code 78E managed by Michael and put it with other Java projects*entity|hasName|hasCode|hasManager|hasClass*project|BestApp|78E|Michael|Java*insert*HPS
+please create a project called BestApp, make its code 78E, managed by Michael, put it with other Java projects, and state is as done*entity|hasName|hasCode|hasManager|hasClass|hasStatus*project|BestApp|78E|Michael|Java|done*insert*HPSC
+i want you to insert a project instance with coe being A9I its class is C named BestApp and put Robert as the maanager*entity|hasCode|hasClass|hasName|hasManager*project|A9I|C|BestApp|Robert*insert*WPMPS
+i want you to insert a project instance with coe being A9I, its class is C, named BestApp and put Robert as the maanager*entity|hasCode|hasClass|hasName|hasManager*project|A9I|C|BestApp|Robert*insert*WPMPSC
+please create a project called BestApp make its cod 78E manaed by Michael and put it with other Java projects*entity|hasName|hasCode|hasManager|hasClass*project|BestApp|78E|Michael|Java*insert*WPHPS
+please create a project called BestApp, make its cod 78E, manaed by Michael and put it with other Java projects*entity|hasName|hasCode|hasManager|hasClass*project|BestApp|78E|Michael|Java*insert*WPHPSC
+i want you to insert a porject instance with code being AWW9I its class is C named PictureinPicture and put Robert as the manager*entity|hasCode|hasClass|hasName|hasManager*project|AWW9I|C|PictureinPicture|Robert*insert*WVMPS
+i want you to insert a porject instance with code being AWW9I, its class is C, named PictureinPicture and put Robert as the manager*entity|hasCode|hasClass|hasName|hasManager*project|AWW9I|C|PictureinPicture|Robert*insert*WVMPSC
+please create a project called OatAction status as ongoing make its code 78E managed by Rotze and put it with other SQL and PLSQL projects*entity|hasName|hasStatus|hasCode|hasManager|hasClass*project|OatAction|ongoing|78E|Rotze|SQL and PLSQL*insert*WVHPS
+please create a project called OatAction, make its code 78E, managed by Rotze and put it with other SQL and PLSQL projects*entity|hasName|hasCode|hasManager|hasClass*project|OatAction|78E|Rotze|SQL and PLSQL*insert*WVHPSC
+i want you to add a project instance with code being A9I its class is C named BestApp and put Robert as the manager*entity|hasCode|hasClass|hasName|hasManager*project|A9I|C|BestApp|Robert*insert*MPSS
+i want you to add a project instance with code being A9I, its class is C, named BestApp and put Robert as the manager*entity|hasCode|hasClass|hasName|hasManager*project|A9I|C|BestApp|Robert*insert*MPSSC
+please put a project called BestApp make its code 78E managed by Michael and put it with other Java projects*entity|hasName|hasCode|hasManager|hasClass*project|BestApp|78E|Michael|Java*insert*HPSS
+please put a project called BestApp, make its code 78E, managed by Michael and put it with other Java projects*entity|hasName|hasCode|hasManager|hasClass*project|BestApp|78E|Michael|Java*insert*HPSSC
+i want you to add a project instance with coe being A9I its klass is C named BestApp status as not done and put Robert as the manager*entity|hasCode|hasClass|hasName|hasStatus|hasManager*project|A9I|C|BestApp|not done|Robert*insert*WPMPSS
+i want you to add a project instance with coe being A9I, its klass is C, named BestApp and put Robert as the manager*entity|hasCode|hasClass|hasName|hasManager*project|A9I|C|BestApp|Robert*insert*WPMPSSC
+please put a project called BestApp make its code 78E manaed by Michael and pt it with other Java projects*entity|hasName|hasCode|hasManager|hasClass*project|BestApp|78E|Michael|Java*insert*WPHPSS
+please put a project called BestApp, make its code 78E, manaed by Michael and pt it with other Java projects*entity|hasName|hasCode|hasManager|hasClass*project|BestApp|78E|Michael|Java*insert*WPHPSSC
+i want you to add a project instance with code being AWW9I its class is C named Co-lectia and put Robert as the manager*entity|hasCode|hasClass|hasName|hasManager*project|AWW9I|C|Co-lectia|Robert*insert*WVMPSS
+i want you to add a project instance with code being AWW9I, its class is C, named Co-lectia and put Robert as the manager*entity|hasCode|hasClass|hasName|hasManager*project|AWW9I|C|Co-lectia|Robert*insert*WVMPSSC
+please put a project called OatAction make its code 7-8E managed by Michael and put it with other SQL and PLSQL projects*entity|hasName|hasCode|hasManager|hasClass*project|OatAction|7-8E|Michael|SQL and PLSQL*insert*WVHPSS
+please put a project called OatAction, make its code 7-8E, managed by Michael and put it with other SQL and PLSQL projects*entity|hasName|hasCode|hasManager|hasClass*project|OatAction|7-8E|Michael|SQL and PLSQL*insert*WVHPSSC
+insert a project with code as 4A7 manager is George status is not ready class is Java and name is BestRobot*entity|hasCode|hasManager|hasStatus|hasClass|hasName*project|4A7|George|not ready|Java|BestRobot*insert*S
+insert a project with code as 4A7, manager is George, class is Java and name is BestRobot*entity|hasCode|hasManager|hasClass|hasName*project|4A7|George|Java|BestRobot*insert*SC
+insert a project with code as D6I2 manager is Bet Mozart class is Java and name is BestRobot*entity|hasCode|hasManager|hasClass|hasName*project|D6I2|Bet Mozart|Java|BestRobot*insert*WVS
+insert a project with code as D6I2, manager is Bet Mozart, class is Java status is developed and name is BestRobot*entity|hasCode|hasManager|hasClass|hasStatus|hasName*project|D6I2|developed|Bet Mozart|Java|BestRobot*insert*WVSC
+add a project with code as 4A7 manager is George class is Python and name is BestRobot*entity|hasCode|hasManager|hasClass|hasName*project|4A7|George|Python|BestRobot*insert*SS
+add a project with code as 4A7, manager is George, class is Python and name is BestRobot*entity|hasCode|hasManager|hasClass|hasName*project|4A7|George|Python|BestRobot*insert*SSC
+add a project with code as 4A7 sttatus is delivered manger is George claz is Python and name is BestRobot*entity|hasCode|hasStatus|hasManager|hasClass|hasName*project|4A7|delivered|George|Python|BestRobot*insert*WPSS
+add a project with code as 4A7, manger is George, claz is Python and name is BestRobot*entity|hasCode|hasManager|hasClass|hasName*project|4A7|George|Java|BestRobot*insert*WPSSC
+add a project with code as D6I2 manager is Bet Mozart class is Python and name is BestRobot*entity|hasCode|hasManager|hasClass|hasName*project|D6I2|Bet Mozart|Python|BestRobot*insert*WVSS
+add a project with code as D6I2, manager is Bet Mozart, class is Java and name is BestRobot*entity|hasCode|hasManager|hasClass|hasName*project|D6I2|Bet Mozart|Java|BestRobot*insert*WVSSC
+insert a project with code as 4A7 manger is George claz is Python and name is BestRobot*entity|hasCode|hasManager|hasClass|hasName*project|4A7|George|Python|BestRobot*insert*WPS
+insert a project with code as 4A7, manger is George, claz is Python and name is BestRobot*entity|hasCode|hasManager|hasClass|hasName*project|4A7|George|Python|BestRobot*insert*WPSC
+please put a phone app called UBBDemo, make its code ZK5, managed by Dulpaino and put it with other Erlang projects*entity|hasName|hasCode|hasManager|hasClass*None|UBBDemo|ZK5|Dulpaino|Erlang*insert*WVHPSSC
+please create a phone app called Quixx status is done make its code ZK5 managed by Azul-Darab and put it with other Python projects*entity|hasName|hasStatus|hasCode|hasManager|hasClass*None|Quixx|done|ZK5|Azul-Darab|Python*insert*WVHPS
+please put a mobile application called BestApp make its code 78E managed by Sertinio and put it with other IPL projects*entity|hasName|hasCode|hasManager|hasClass*None|BestApp|78E|Sertinio|IPL*insert*WVHPSS
+i want you to add a program instance with code being something like BL4, its class is Dandy, named UBBDemo and put Skanuij as the manager*entity|hasCode|hasClass|hasName|hasManager*None|something like BL4|Dandy|UBBDemo|Skanuij*insert*WVMPSSC
+Add one employee, Carla, with the role of professor*entity|hasName|hasRole*employee|Carla|professor*insert*MPS
+insert a new employee named Ionut, which is our natural language engineer*entity|hasName|hasRole*employee|Ionut|natural language engineer*insert*MPS
+Please, add a new status with the name done*entity|hasName*status|done*insert*MPS
+Add one status named in progress*entity|hasName*status|in progress*insert*MPS
+Insert a status with the name of postponed*entity|hasName*status|postponed*insert*S
+generate all the reports you have*entity*None*insert*SN
+The meeting has to be scheduled today*entity*None*insert*SN
+Set all the remaining days of august free*entity*None*insert*SN
