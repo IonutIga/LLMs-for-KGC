@@ -1,2 +1,4 @@
 # LLMs-for-KGC
-Test
+Large Language Models (LLMs) have demonstrated incredible abilities of solving diverse tasks formulated in natural language. Recent work has demonstrated their capacity to solve tasks related to Knowledge Graphs (KGs), such as KG Completion (KGC), even in Zero- or Few-Shot paradigms. However, they are known to hallucinate answers, or output results in a non-deterministic manner, thus leading to wrongly reasoned responses, even if they satisfy the user’s demands. To highlight opportunities and challenges in KG-related tasks, we experiment with two distinguished LLMs, namely Mixtral 8x7B-instruct-v0.1, and GPT 3.5-turbo-0125, on KGC for Static KGs, using prompts constructed following the TELeR taxonomy, in Zero- and One-Shot contexts, on a Task-Oriented Dialogue System use case . When evaluated using both strict and flexible metrics measurement manners, our results show that LLMs may be fit for such a task if prompts encapsulate sufficient information and relevant examples. 
+
+To reproduce the experiments, follow the guidelines in the notebook. All other references to previous works of ours can be found on Github.
