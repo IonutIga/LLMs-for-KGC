@@ -1,0 +1,162 @@
+WITHOUT COMMA
+
+	S - standard
+	LPS - low paraphrased standard
+	MPS - medium paraphrased standard
+	HPS - high paraphrased standard
+	WPS - wrong params standard
+	WVS - wrong values standard
+	WPLPS - wrong params low paraphrased standard
+	WPMPS - wrong params medium paraphrased standard
+	WPHPS - wrong params high paraphrased standard
+	WVLPS - wrong values low paraphrased standard
+	WVMPS - wrong values medium paraphrased standard
+	WVHPS - wrong values high paraphrased standard
+
+	SS - standard synonym
+	LPSS - low paraphrased standard synonym
+	MPSS - medium paraphrased standard synonym
+	HPSS - high paraphrased standard synonym
+	WPSS - wrong params standard synonym
+	WVSS - wrong values standard synonym
+	WPLPSS - wrong params low paraphrased standard synonym
+	WPMPSS - wrong params medium paraphrased standard
+	WPHPSS - wrong params high paraphrased standard synonym
+	WVLPSS - wrong values low paraphrased standard synonym
+	WVMPSS - wrong values medium paraphrased standard synonym
+	WVHPSS - wrong values high paraphrased standard synonym
+
+	UPDATE ONLY 
+		WOFS - without filters standard
+		WOFLPS - without filters low paraphrased standard 
+		WOFMPS - without filters medium paraphrased standard 
+		WOFHPS - without filters high paraphrased standard
+		WOFWPS - without filters wrong params standard
+		WOFWVS - without filters wrong values standard		
+		WOFWPLPS - without filters wrong params low paraphrased standard 
+		WOFWPMPS - without filters wrong params medium paraphrased standard 
+		WOFWPHPS - without filters wrong params high paraphrased standard 
+		WOFWVLPS - without filters wrong values low paraphrased standard 
+		WOFWVMPS - without filters wrong values medium paraphrased standard 
+		WOFWVHPS - without filters wrong values high paraphrased standard 
+
+		UKSS - update keywords substitution standard
+		UKSLPS - update keywords substitution low paraphrased standard 
+		UKSMPS - update keywords substitution medium paraphrased standard 
+		UKSHPS - update keywords substitution high paraphrased standard 
+		UKSWPS - update keywords substitution wrong params standard
+		UKSWVS - update keywords substitution values standard	
+		UKSWPLPS - update keywords substitution wrong params low paraphrased standard 
+		UKSWPMPS - update keywords substitution wrong params medium paraphrased standard 
+		UKSWPHPS - update keywords substitution wrong params high paraphrased standard 
+		UKSWVLPS - update keywords substitution wrong values low paraphrased standard 
+		UKSWVMPS - update keywords substitution wrong values medium paraphrased standard 
+		UKSWVHPS - update keywords substitution wrong values high paraphrased standard 
+
+		WOFSS - without filters standard synonym
+		WOFLPSS - without filters low paraphrased standard synonym
+		WOFMPSS- without filters medium paraphrased standard synonym
+		WOFHPSS - without filters high paraphrased standard synonym
+		WOFWPSS - without filters wrong params standard synonym
+		WOFWVSS - without filters wrong values standard synonym
+		WOFWPLPSS - without filters wrong params low paraphrased standard synonym
+		WOFWPMPSS - without filters wrong params medium paraphrased standard synonym
+		WOFWPHPSS - without filters wrong params high paraphrased standard synonym
+		WOFWVLPSS - without filters wrong values low paraphrased standard synonym
+		WOFWVMPSS - without filters wrong values medium paraphrased standard synonym
+		WOFWVHPSS - without filters wrong values high paraphrased standard synonym
+
+		UKSFSS - update keywords substitution standard synonym
+		UKSLPSS - update keywords substitution low paraphrased standard synonym
+		UKSMPSS - update keywords substitution medium paraphrased standard synonym
+		UKSHPSS - update keywords substitution high paraphrased standard synonym
+		UKSWPSS - update keywords substitution wrong params standard synonym
+		UKSWVSS - update keywords substitution values standard synonym
+		UKSWPLPSS - update keywords substitution wrong params low paraphrased standard synonym
+		UKSWPMPSS - update keywords substitution wrong params medium paraphrased standard synonym
+		UKSWPHPSS - update keywords substitution wrong params high paraphrased standard synonym
+		UKSWVLPSS - update keywords substitution wrong values low paraphrased standard synonym
+		UKSWVMPSS - update keywords substitution wrong values medium paraphrased standard synonym
+		UKSWVHPSS - update keywords substitution wrong values high paraphrased standard synonym
+
+WITH COMMA
+
+	SC - standard
+	LPSC - low paraphrased standard
+	MPSC - medium paraphrased standard
+	HPSC - high paraphrased standard
+	WPSC - wrong params standard 
+	WVSC - wrong values standard 
+	WPLPSC - wrong params low paraphrased standard
+	WPMPSC - wrong params medium paraphrased standard
+	WPHPSC - wrong params high paraphrased standard
+	WVLPSC - wrong values low paraphrased standard
+	WVMPSC - wrong values medium paraphrased standard
+	WVHPSC - wrong values high paraphrased standard
+
+	SSC - standard synonym
+	LPSSC - low paraphrased standard synonym
+	MPSSC - medium paraphrased standard synonym
+	HPSSC - high paraphrased standard synonym
+	WPSSC - wrong params standard synonym
+	WVSSC - wrong values standard synonym
+	WPLPSSC - wrong params low paraphrased standard synonym
+	WPMPSSC - wrong params medium paraphrased standard
+	WPHPSSC - wrong params high paraphrased standard synonym
+	WVLPSSC - wrong values low paraphrased standard synonym
+	WVMPSSC - wrong values medium paraphrased standard synonym
+	WVHPSSC - wrong values high paraphrased standard synonym
+
+	UPDATE ONLY 
+		WOFSC - without filters standard
+		WOFLPSC - without filters low paraphrased standard 
+		WOFMPSC - without filters medium paraphrased standard 
+		WOFHPSC - without filters high paraphrased standard 
+		WOFWPSC - without filters wrong params standard
+		WOFWVSC - without filters wrong values standard	
+		WOFWPLPSC - without filters wrong params low paraphrased standard 
+		WOFWPMPSC - without filters wrong params medium paraphrased standard 
+		WOFWPHPSC - without filters wrong params high paraphrased standard 
+		WOFWVLPSC - without filters wrong values low paraphrased standard 
+		WOFWVMPSC - without filters wrong values medium paraphrased standard 
+		WOFWVHPSC - without filters wrong values high paraphrased standard 
+
+		UKSSC - update keywords substitution standard
+		UKSLPSC - update keywords substitution low paraphrased standard 
+		UKSMPSC - update keywords substitution medium paraphrased standard 
+		UKSHPSC - update keywords substitution high paraphrased standard 
+		UKSWPSC - update keywords substitution wrong params standard
+		UKSWVSC - update keywords substitution values standard
+		UKSWPLPSC - update keywords substitution wrong params low paraphrased standard 
+		UKSWPMPSC - update keywords substitution wrong params medium paraphrased standard 
+		UKSWPHPSC - update keywords substitution wrong params high paraphrased standard 
+		UKSWVLPSC - update keywords substitution wrong values low paraphrased standard 
+		UKSWVMPSC - update keywords substitution wrong values medium paraphrased standard 
+		UKSWVHPSC - update keywords substitution wrong values high paraphrased standard 
+
+		WOFSSC - without filters standard synonym
+		WOFLPSSC - without filters low paraphrased standard synonym
+		WOFMPSSC- without filters medium paraphrased standard synonym
+		WOFHPSSC - without filters high paraphrased standard synonym
+		WOFWPSSC - without filters wrong params standard synonym
+		WOFWVSSC - without filters wrong values standard synonym
+		WOFWPLPSSC - without filters wrong params low paraphrased standard synonym
+		WOFWPMPSSC - without filters wrong params medium paraphrased standard synonym
+		WOFWPHPSSC - without filters wrong params high paraphrased standard synonym
+		WOFWVLPSSC - without filters wrong values low paraphrased standard synonym
+		WOFWVMPSSC - without filters wrong values medium paraphrased standard synonym
+		WOFWVHPSSC - without filters wrong values high paraphrased standard synonym
+
+		UKSFSSC - update keywords substitution standard synonym
+		UKSLPSSC - update keywords substitution low paraphrased standard synonym
+		UKSMPSSC - update keywords substitution medium paraphrased standard synonym
+		UKSHPSSC - update keywords substitution high paraphrased standard synonym
+		UKSWPSSC - update keywords substitution wrong params standard synonym
+		UKSWVSSC - update keywords substitution values standard synonym
+		UKSWPLPSSC - update keywords substitution wrong params low paraphrased standard synonym
+		UKSWPMPSSC - update keywords substitution wrong params medium paraphrased standard synonym
+		UKSWPHPSSC - update keywords substitution wrong params high paraphrased standard synonym
+		UKSWVLPSSC - update keywords substitution wrong values low paraphrased standard synonym
+		UKSWVMPSSC - update keywords substitution wrong values medium paraphrased standard synonym
+		UKSWVHPSSC - update keywords substitution wrong values high paraphrased standard synonym
+
