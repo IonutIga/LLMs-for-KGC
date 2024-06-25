@@ -1,0 +1,1344 @@
+
+---template strict True, triple strict True---
+
+Model: gpt-4o 
+ accuracy: 0.62;
+ precision: 0.68;
+ recall: 0.62;
+ f1 score: 0.65;
+ penalize: 0.0; 
+ nr of instances: 1170; 
+ incorrect output format: 21; 
+ error: 0
+
+
+---template strict True, triple strict True---
+
+Model: gpt-4o_1 
+ accuracy: 0.53;
+ precision: 0.76;
+ recall: 0.53;
+ f1 score: 0.62;
+ penalize: 0.0; 
+ nr of instances: 234; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_2 
+ accuracy: 0.54;
+ precision: 0.57;
+ recall: 0.54;
+ f1 score: 0.55;
+ penalize: 0.0; 
+ nr of instances: 234; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_3 
+ accuracy: 0.59;
+ precision: 0.62;
+ recall: 0.59;
+ f1 score: 0.6;
+ penalize: 0.0; 
+ nr of instances: 234; 
+ incorrect output format: 4; 
+ error: 0
+
+Model: gpt-4o_4.1 
+ accuracy: 0.71;
+ precision: 0.71;
+ recall: 0.71;
+ f1 score: 0.71;
+ penalize: 0.0; 
+ nr of instances: 234; 
+ incorrect output format: 11; 
+ error: 0
+
+Model: gpt-4o_4.2 
+ accuracy: 0.73;
+ precision: 0.73;
+ recall: 0.73;
+ f1 score: 0.73;
+ penalize: 0.0; 
+ nr of instances: 234; 
+ incorrect output format: 6; 
+ error: 0
+
+
+---template strict True, triple strict True---
+
+Model: gpt-4o_Project 
+ accuracy: 0.77;
+ precision: 0.85;
+ recall: 0.77;
+ f1 score: 0.81;
+ penalize: 0.0; 
+ nr of instances: 840; 
+ incorrect output format: 7; 
+ error: 0
+
+Model: gpt-4o_None 
+ accuracy: 0.18;
+ precision: 0.18;
+ recall: 0.18;
+ f1 score: 0.18;
+ penalize: 0.0; 
+ nr of instances: 225; 
+ incorrect output format: 12; 
+ error: 0
+
+Model: gpt-4o_Employee 
+ accuracy: 0.27;
+ precision: 0.33;
+ recall: 0.27;
+ f1 score: 0.3;
+ penalize: 0.0; 
+ nr of instances: 60; 
+ incorrect output format: 1; 
+ error: 0
+
+Model: gpt-4o_Status 
+ accuracy: 0.4;
+ precision: 0.44;
+ recall: 0.4;
+ f1 score: 0.42;
+ penalize: 0.0; 
+ nr of instances: 45; 
+ incorrect output format: 1; 
+ error: 0
+
+
+---template strict True, triple strict True---
+
+Model: gpt-4o_LPS-I 
+ accuracy: 0.5;
+ precision: 0.49;
+ recall: 0.5;
+ f1 score: 0.49;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_LPSC 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_MPS 
+ accuracy: 0.84;
+ precision: 0.9;
+ recall: 0.84;
+ f1 score: 0.87;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_MPSC 
+ accuracy: 0.84;
+ precision: 0.9;
+ recall: 0.84;
+ f1 score: 0.87;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_HPS 
+ accuracy: 0.42;
+ precision: 0.49;
+ recall: 0.42;
+ f1 score: 0.45;
+ penalize: 0.0; 
+ nr of instances: 135; 
+ incorrect output format: 3; 
+ error: 0
+
+Model: gpt-4o_HPSC 
+ accuracy: 0.74;
+ precision: 0.86;
+ recall: 0.74;
+ f1 score: 0.8;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPLPS 
+ accuracy: 0.87;
+ precision: 0.93;
+ recall: 0.87;
+ f1 score: 0.9;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPLPSC 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPMPS 
+ accuracy: 0.72;
+ precision: 0.79;
+ recall: 0.72;
+ f1 score: 0.75;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPMPSC 
+ accuracy: 0.78;
+ precision: 0.82;
+ recall: 0.78;
+ f1 score: 0.8;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPS 
+ accuracy: 0.71;
+ precision: 0.82;
+ recall: 0.71;
+ f1 score: 0.76;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPSC 
+ accuracy: 0.84;
+ precision: 0.98;
+ recall: 0.84;
+ f1 score: 0.9;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVLPS-I 
+ accuracy: 0.7;
+ precision: 0.73;
+ recall: 0.7;
+ f1 score: 0.71;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVLPSC 
+ accuracy: 0.88;
+ precision: 0.93;
+ recall: 0.88;
+ f1 score: 0.9;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 1; 
+ error: 0
+
+Model: gpt-4o_WVMPS-I 
+ accuracy: 0.0;
+ precision: 0.0;
+ recall: 0.0;
+ f1 score: 0;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVMPSC 
+ accuracy: 0.07;
+ precision: 0.07;
+ recall: 0.07;
+ f1 score: 0.07;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVHPS 
+ accuracy: 0.0;
+ precision: 0.0;
+ recall: 0.0;
+ f1 score: 0;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVHPSC 
+ accuracy: 0.07;
+ precision: 0.07;
+ recall: 0.07;
+ f1 score: 0.07;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 1; 
+ error: 0
+
+Model: gpt-4o_LPSS 
+ accuracy: 0.81;
+ precision: 0.87;
+ recall: 0.81;
+ f1 score: 0.84;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_LPSSC 
+ accuracy: 0.71;
+ precision: 0.77;
+ recall: 0.71;
+ f1 score: 0.74;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_MPSS 
+ accuracy: 0.84;
+ precision: 0.9;
+ recall: 0.84;
+ f1 score: 0.87;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_MPSSC-I 
+ accuracy: 0.59;
+ precision: 0.62;
+ recall: 0.59;
+ f1 score: 0.6;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_HPSS-RI 
+ accuracy: 0.7;
+ precision: 0.76;
+ recall: 0.7;
+ f1 score: 0.73;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_HPSSC-R 
+ accuracy: 0.81;
+ precision: 0.93;
+ recall: 0.81;
+ f1 score: 0.87;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPLPSS-RI 
+ accuracy: 0.64;
+ precision: 0.66;
+ recall: 0.64;
+ f1 score: 0.65;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPLPSSC-R 
+ accuracy: 0.83;
+ precision: 0.86;
+ recall: 0.83;
+ f1 score: 0.84;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPMPSS-I 
+ accuracy: 0.57;
+ precision: 0.65;
+ recall: 0.57;
+ f1 score: 0.61;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPMPSSC 
+ accuracy: 0.77;
+ precision: 0.83;
+ recall: 0.77;
+ f1 score: 0.8;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPSS 
+ accuracy: 0.8;
+ precision: 0.93;
+ recall: 0.8;
+ f1 score: 0.86;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPSSC 
+ accuracy: 0.65;
+ precision: 0.78;
+ recall: 0.65;
+ f1 score: 0.71;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 2; 
+ error: 0
+
+Model: gpt-4o_WVMPSS-I 
+ accuracy: 0.07;
+ precision: 0.07;
+ recall: 0.07;
+ f1 score: 0.07;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVMPSSC 
+ accuracy: 0.0;
+ precision: 0.0;
+ recall: 0.0;
+ f1 score: 0;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVHPSSC 
+ accuracy: 0.0;
+ precision: 0.0;
+ recall: 0.0;
+ f1 score: 0;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_LPS-R 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_LPSC-R 
+ accuracy: 0.73;
+ precision: 0.79;
+ recall: 0.73;
+ f1 score: 0.76;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 2; 
+ error: 0
+
+Model: gpt-4o_WPLPS-I 
+ accuracy: 0.51;
+ precision: 0.46;
+ recall: 0.51;
+ f1 score: 0.48;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPS-R 
+ accuracy: 0.64;
+ precision: 0.87;
+ recall: 0.64;
+ f1 score: 0.74;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPSC-R 
+ accuracy: 0.72;
+ precision: 0.86;
+ recall: 0.72;
+ f1 score: 0.78;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVLPS 
+ accuracy: 0.93;
+ precision: 0.99;
+ recall: 0.93;
+ f1 score: 0.96;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVMPS 
+ accuracy: 0.07;
+ precision: 0.07;
+ recall: 0.07;
+ f1 score: 0.07;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 1; 
+ error: 0
+
+Model: gpt-4o_WVMPSC-I 
+ accuracy: 0.0;
+ precision: 0.0;
+ recall: 0.0;
+ f1 score: 0;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_LPSS-R 
+ accuracy: 0.78;
+ precision: 0.82;
+ recall: 0.78;
+ f1 score: 0.8;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_LPSSC-R 
+ accuracy: 0.81;
+ precision: 0.86;
+ recall: 0.81;
+ f1 score: 0.83;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_MPSSC 
+ accuracy: 0.79;
+ precision: 0.85;
+ recall: 0.79;
+ f1 score: 0.82;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_HPSS 
+ accuracy: 0.8;
+ precision: 0.93;
+ recall: 0.8;
+ f1 score: 0.86;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_HPSSC 
+ accuracy: 0.72;
+ precision: 0.84;
+ recall: 0.72;
+ f1 score: 0.78;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPLPSS 
+ accuracy: 0.74;
+ precision: 0.8;
+ recall: 0.74;
+ f1 score: 0.77;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPLPSSC 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPMPSS 
+ accuracy: 0.76;
+ precision: 0.82;
+ recall: 0.76;
+ f1 score: 0.79;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPSS-R 
+ accuracy: 0.8;
+ precision: 0.93;
+ recall: 0.8;
+ f1 score: 0.86;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPSSC-R 
+ accuracy: 0.75;
+ precision: 0.99;
+ recall: 0.75;
+ f1 score: 0.85;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVLPSS 
+ accuracy: 0.75;
+ precision: 0.79;
+ recall: 0.75;
+ f1 score: 0.77;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 1; 
+ error: 0
+
+Model: gpt-4o_WVLPSSC 
+ accuracy: 0.78;
+ precision: 0.83;
+ recall: 0.78;
+ f1 score: 0.8;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVMPSS 
+ accuracy: 0.07;
+ precision: 0.07;
+ recall: 0.07;
+ f1 score: 0.07;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVHPSS 
+ accuracy: 0.0;
+ precision: 0.0;
+ recall: 0.0;
+ f1 score: 0;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_SN 
+ accuracy: 0.78;
+ precision: 0.78;
+ recall: 0.78;
+ f1 score: 0.78;
+ penalize: 0.0; 
+ nr of instances: 45; 
+ incorrect output format: 10; 
+ error: 0
+
+
+---template strict False, triple strict False---
+
+Model: gpt-4o_LPS-I 
+ accuracy: 0.53;
+ precision: 0.53;
+ recall: 0.53;
+ f1 score: 0.53;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_LPSC 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_MPS 
+ accuracy: 0.92;
+ precision: 0.98;
+ recall: 0.92;
+ f1 score: 0.95;
+ penalize: 0.01; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_MPSC 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.01; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_HPS 
+ accuracy: 0.52;
+ precision: 0.59;
+ recall: 0.52;
+ f1 score: 0.55;
+ penalize: 0.0; 
+ nr of instances: 135; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_HPSC 
+ accuracy: 0.83;
+ precision: 0.96;
+ recall: 0.83;
+ f1 score: 0.89;
+ penalize: 0.01; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPLPS 
+ accuracy: 0.93;
+ precision: 1.0;
+ recall: 0.93;
+ f1 score: 0.96;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPLPSC 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPMPS 
+ accuracy: 0.83;
+ precision: 0.9;
+ recall: 0.83;
+ f1 score: 0.86;
+ penalize: 0.01; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPMPSC 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.01; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPS 
+ accuracy: 0.87;
+ precision: 1.0;
+ recall: 0.87;
+ f1 score: 0.93;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPSC 
+ accuracy: 0.86;
+ precision: 1.0;
+ recall: 0.86;
+ f1 score: 0.92;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVLPS-I 
+ accuracy: 0.75;
+ precision: 0.78;
+ recall: 0.75;
+ f1 score: 0.76;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVLPSC 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.0; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVMPS-I 
+ accuracy: 0.0;
+ precision: 0.0;
+ recall: 0.0;
+ f1 score: 0;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVMPSC 
+ accuracy: 0.07;
+ precision: 0.07;
+ recall: 0.07;
+ f1 score: 0.07;
+ penalize: 0.03; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVHPS 
+ accuracy: 0.0;
+ precision: 0.0;
+ recall: 0.0;
+ f1 score: 0;
+ penalize: 0.02; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVHPSC 
+ accuracy: 0.1;
+ precision: 0.1;
+ recall: 0.1;
+ f1 score: 0.1;
+ penalize: 0.01; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_LPSS 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_LPSSC 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.02; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_MPSS 
+ accuracy: 0.92;
+ precision: 0.98;
+ recall: 0.92;
+ f1 score: 0.95;
+ penalize: 0.01; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_MPSSC-I 
+ accuracy: 0.75;
+ precision: 0.79;
+ recall: 0.75;
+ f1 score: 0.77;
+ penalize: 0.02; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_HPSS-RI 
+ accuracy: 0.7;
+ precision: 0.76;
+ recall: 0.7;
+ f1 score: 0.73;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_HPSSC-R 
+ accuracy: 0.88;
+ precision: 1.0;
+ recall: 0.88;
+ f1 score: 0.94;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPLPSS-RI 
+ accuracy: 0.72;
+ precision: 0.74;
+ recall: 0.72;
+ f1 score: 0.73;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPLPSSC-R 
+ accuracy: 0.94;
+ precision: 0.97;
+ recall: 0.94;
+ f1 score: 0.95;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPMPSS-I 
+ accuracy: 0.6;
+ precision: 0.69;
+ recall: 0.6;
+ f1 score: 0.64;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPMPSSC 
+ accuracy: 0.92;
+ precision: 0.98;
+ recall: 0.92;
+ f1 score: 0.95;
+ penalize: 0.01; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPSS 
+ accuracy: 0.86;
+ precision: 1.0;
+ recall: 0.86;
+ f1 score: 0.92;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPSSC 
+ accuracy: 0.83;
+ precision: 0.96;
+ recall: 0.83;
+ f1 score: 0.89;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVMPSS-I 
+ accuracy: 0.07;
+ precision: 0.07;
+ recall: 0.07;
+ f1 score: 0.07;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVMPSSC 
+ accuracy: 0.0;
+ precision: 0.0;
+ recall: 0.0;
+ f1 score: 0;
+ penalize: 0.03; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVHPSSC 
+ accuracy: 0.0;
+ precision: 0.0;
+ recall: 0.0;
+ f1 score: 0;
+ penalize: 0.02; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_LPS-R 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_LPSC-R 
+ accuracy: 0.92;
+ precision: 0.97;
+ recall: 0.92;
+ f1 score: 0.94;
+ penalize: 0.02; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPLPS-I 
+ accuracy: 0.63;
+ precision: 0.58;
+ recall: 0.63;
+ f1 score: 0.6;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPS-R 
+ accuracy: 0.71;
+ precision: 0.95;
+ recall: 0.71;
+ f1 score: 0.81;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPSC-R 
+ accuracy: 0.77;
+ precision: 0.93;
+ recall: 0.77;
+ f1 score: 0.84;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVLPS 
+ accuracy: 0.93;
+ precision: 0.99;
+ recall: 0.93;
+ f1 score: 0.96;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVMPS 
+ accuracy: 0.13;
+ precision: 0.13;
+ recall: 0.13;
+ f1 score: 0.13;
+ penalize: 0.02; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVMPSC-I 
+ accuracy: 0.0;
+ precision: 0.0;
+ recall: 0.0;
+ f1 score: 0;
+ penalize: 0.02; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_LPSS-R 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_LPSSC-R 
+ accuracy: 0.94;
+ precision: 0.99;
+ recall: 0.94;
+ f1 score: 0.96;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_MPSSC 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_HPSS 
+ accuracy: 0.86;
+ precision: 1.0;
+ recall: 0.86;
+ f1 score: 0.92;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_HPSSC 
+ accuracy: 0.87;
+ precision: 1.0;
+ recall: 0.87;
+ f1 score: 0.93;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPLPSS 
+ accuracy: 0.9;
+ precision: 0.96;
+ recall: 0.9;
+ f1 score: 0.93;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPLPSSC 
+ accuracy: 0.94;
+ precision: 1.0;
+ recall: 0.94;
+ f1 score: 0.97;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPMPSS 
+ accuracy: 0.9;
+ precision: 0.96;
+ recall: 0.9;
+ f1 score: 0.93;
+ penalize: 0.01; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPSS-R 
+ accuracy: 0.86;
+ precision: 1.0;
+ recall: 0.86;
+ f1 score: 0.92;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WPHPSSC-R 
+ accuracy: 0.75;
+ precision: 0.99;
+ recall: 0.75;
+ f1 score: 0.85;
+ penalize: 0.0; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVLPSS 
+ accuracy: 0.87;
+ precision: 0.91;
+ recall: 0.87;
+ f1 score: 0.89;
+ penalize: 0.01; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVLPSSC 
+ accuracy: 0.85;
+ precision: 0.9;
+ recall: 0.85;
+ f1 score: 0.87;
+ penalize: 0.01; 
+ nr of instances: 30; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVMPSS 
+ accuracy: 0.07;
+ precision: 0.07;
+ recall: 0.07;
+ f1 score: 0.07;
+ penalize: 0.02; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_WVHPSS 
+ accuracy: 0.0;
+ precision: 0.0;
+ recall: 0.0;
+ f1 score: 0;
+ penalize: 0.03; 
+ nr of instances: 15; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_SN 
+ accuracy: 1.0;
+ precision: 1.0;
+ recall: 1.0;
+ f1 score: 1.0;
+ penalize: 0.0; 
+ nr of instances: 45; 
+ incorrect output format: 0; 
+ error: 0
+
+
+---template strict False, triple strict False---
+
+Model: gpt-4o_Project 
+ accuracy: 0.86;
+ precision: 0.94;
+ recall: 0.86;
+ f1 score: 0.9;
+ penalize: 0.01; 
+ nr of instances: 840; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_None 
+ accuracy: 0.24;
+ precision: 0.24;
+ recall: 0.24;
+ f1 score: 0.24;
+ penalize: 0.02; 
+ nr of instances: 225; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_Employee 
+ accuracy: 0.4;
+ precision: 0.46;
+ recall: 0.4;
+ f1 score: 0.43;
+ penalize: 0.0; 
+ nr of instances: 60; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_Status 
+ accuracy: 0.48;
+ precision: 0.52;
+ recall: 0.48;
+ f1 score: 0.5;
+ penalize: 0.0; 
+ nr of instances: 45; 
+ incorrect output format: 0; 
+ error: 0
+
+
+---template strict False, triple strict False---
+
+Model: gpt-4o_1 
+ accuracy: 0.54;
+ precision: 0.78;
+ recall: 0.54;
+ f1 score: 0.64;
+ penalize: 0.0; 
+ nr of instances: 234; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_2 
+ accuracy: 0.74;
+ precision: 0.76;
+ recall: 0.74;
+ f1 score: 0.75;
+ penalize: 0.02; 
+ nr of instances: 234; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_3 
+ accuracy: 0.74;
+ precision: 0.77;
+ recall: 0.74;
+ f1 score: 0.75;
+ penalize: 0.01; 
+ nr of instances: 234; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_4.1 
+ accuracy: 0.76;
+ precision: 0.75;
+ recall: 0.76;
+ f1 score: 0.75;
+ penalize: 0.0; 
+ nr of instances: 234; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: gpt-4o_4.2 
+ accuracy: 0.75;
+ precision: 0.76;
+ recall: 0.75;
+ f1 score: 0.75;
+ penalize: 0.01; 
+ nr of instances: 234; 
+ incorrect output format: 0; 
+ error: 0
+
+
+---template strict False, triple strict False---
+
+Model: gpt-4o 
+ accuracy: 0.7;
+ precision: 0.76;
+ recall: 0.7;
+ f1 score: 0.73;
+ penalize: 0.01; 
+ nr of instances: 1170; 
+ incorrect output format: 0; 
+ error: 0
+
