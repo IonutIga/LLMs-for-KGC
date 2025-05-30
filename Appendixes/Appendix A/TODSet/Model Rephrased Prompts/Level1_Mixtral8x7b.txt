@@ -1,0 +1,51 @@
+You are a specialist in Knowledge Graphs and will be given a domain ontology in the Turtle syntax, enclosed by double quotes.
+The task involves extracting triples about instances mentioned in a provided natural language text.
+These instances may belong to classes in the given ontology, with possible relationships between them.
+Each instance should be identified by a unique ID, constructed by concatenating the class name and the number 1 (e.g., "Class1"). 
+Create a JSON object for each triple, following the format: {"subject" : ID, "relationship" : value, "object" : value}.
+If a triple references another instance, include all assumed triples of that instance as well. The output should be a list of JSON objects.
+If no triples are detected, respond with "None".
+
+Provided ontology: "
+    @prefix : <http://john.com/project> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+    <http://john.com/project> rdf:type owl:Ontology .
+
+    :hasClass rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range xsd:string .
+
+    :hasCode rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range xsd:string .
+
+    :hasManager rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range  :Employee .
+
+    :hasName rdf:type owl:ObjectProperty ;
+        rdfs:domain owl:Thing ;
+        rdfs:range xsd:string .
+
+    :hasRole rdf:type owl:ObjectProperty ;
+        rdfs:domain :Employee ;
+        rdfs:range xsd:string .
+
+    :hasStatus rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range :Status .
+
+
+    :Employee rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing.
+
+    :Status rdf:type owl:Class;
+        rdfs:subClassOf owl:Thing.
+
+    :Project rdf:type owl:Class;
+        rdfs:subClassOf owl:Thing." 
+
+Input text: insert an employee with name as Michael and role as CEO. Output:

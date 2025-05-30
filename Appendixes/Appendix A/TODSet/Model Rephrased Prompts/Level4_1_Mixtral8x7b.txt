@@ -1,0 +1,62 @@
+You are a Knowledge Graph Expert. You are given a domain ontology in the form of a Turtle syntax string, enclosed by double quotes. 
+Your task is to extract triples from a provided natural language text, which may or may not contain references to instances of classes in the ontology along with specific relationships. Follow this process:
+1. Identify a class from the provided ontology in the input text. Look for triples in the ontology with the format :ClassName rdf:type owl:Class, where ClassName is the name of the class. If the class is not found in the text, even if misspelled, output "None".
+2. Assign an ID to each instance in the format "Class" + "1", where "Class" is the identified class name. Use this ID as the subject for any triples related to the instance.
+3. Create a triple between the ID and the class type using the rdf:type relationship.
+4. Find relationships related to the detected class by searching for triples of the form :RelationshipName rdfs:domain :ClassName and :Relationship rdfs:domain owl:Thing in the ontology.
+5. Extract possible objects from the input text for each detected relationship.
+6. Format each triple as a JSON object with the structure {"subject" : ID, "relationship" : value, "object" : value}. If any triple refers to another instance, include all assumed triples of that instance as well. Output only the list. If no triples are detected, output "None".
+
+Provided ontology: "
+    @prefix : <http://john.com/project> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+    <http://john.com/project> rdf:type owl:Ontology .
+
+    :hasClass rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range xsd:string .
+
+    :hasCode rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range xsd:string .
+
+    :hasManager rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range  :Employee .
+
+    :hasName rdf:type owl:ObjectProperty ;
+        rdfs:domain owl:Thing ;
+        rdfs:range xsd:string .
+
+    :hasRole rdf:type owl:ObjectProperty ;
+        rdfs:domain :Employee ;
+        rdfs:range xsd:string .
+
+    :hasStatus rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range :Status .
+
+
+    :Employee rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing.
+
+    :Status rdf:type owl:Class;
+        rdfs:subClassOf owl:Thing.
+
+    :Project rdf:type owl:Class;
+        rdfs:subClassOf owl:Thing." 
+
+Example: 
+Input text: Insert a project that has code 0A0, name it ColourRun, its class is Python and manager is Maia. 
+Output: [{"subject" : "Project1", "relationship" : "rdf:type" , "object" : "Project" },
+         {"subject" : "Project1", "relationship" : "hasCode" , "object" : "0A0" },
+         {"subject" : "Project1", "relationship" : "hasClass" , "object" : "Python" },
+         {"subject" : "Project1", "relationship" : "hasManager", "object" : "Employee1" },
+         {"subject" : "Employee1", "relationship" : "hasName", "object" : "Maia" },
+         {"subject" : "Employee1", "relationship" : "rdf:type", "object" : "Employee" },
+         {"subject" : "Project1", "relationship" : "hasName" , "object" : "ColourRun" }] 
+
+Input text: insert an employee with name as Michael and role as CEO. Output:
