@@ -1,0 +1,197 @@
+You are a Knowledge Graph Expert. A domain ontology is provided to you, delimited by double quotes. The syntax used to describe the ontology is Turtle.
+Your input is a natural language text. The input text may or may not contain references to instances of classes provided in the ontology, together with specific relationships.
+Given the provided ontology, your task is to extract triples about the mentioned instances from the input text.
+Each instance should be identified by an ID, using the format "Class" + "1", where "Class" is the name of the detected class and + is concatenation.
+A triple you always create is between the ID and the class type, using the rdf:type relationship.
+Put each triple in a JSON object, as follows: {"subject" : ID, "relationship" : value, "object" : value}. If any triple refers to another instance, add all triples you assumed of that instance too.
+Respond only with the JSON object(s) in a list. If no triple is detected, output "None".
+
+Provided ontology: "
+  @prefix dc: <http://purl.org/dc/elements/1.1/> .
+  @prefix onto: <https://cenguix.github.io/Text2KGBench/ont_15_sportsteam#> .
+  @prefix owl: <http://www.w3.org/2002/07/owl#> .
+  @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+  @prefix ontorels: <https://cenguix.github.io/Text2KGBench/ont_15_sportsteam/relations#> .
+  @prefix ontoconcepts: <https://cenguix.github.io/Text2KGBench/ont_15_sportsteam/concepts#> .
+  @prefix ontoliterals: <https://cenguix.github.io/Text2KGBench/ont_15_sportsteam/literals#> .
+
+  <http://example.com/ontology> a owl:Ontology ;
+      rdfs:label "SportsTeam Ontology" ;
+      dc:creator <http://orcid.org/0000-0001-7197-0766>,
+          <http://orcid.org/0000-0003-4303-983X>,
+          <http://orcid.org/0000−0003−1707−4842> ;
+      rdfs:comment "An ontology used in the Text2KGBench, modified for our work." ;
+      owl:versionIRI onto:v1 .
+
+  ontorels:birthPlace a owl:ObjectProperty ;
+      rdfs:label "birthPlace" ;
+      rdfs:domain ontoconcepts:Person ;
+      rdfs:range ontoconcepts:Place .
+
+  ontorels:capital a owl:ObjectProperty ;
+      rdfs:label "capital" ;
+      rdfs:domain ontoconcepts:Country ;
+      rdfs:range ontoconcepts:City .
+
+  ontorels:chairmanTitle a owl:ObjectProperty ;
+      rdfs:label "chairmanTitle" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoliterals:string .
+
+  ontorels:champions a owl:ObjectProperty ;
+      rdfs:label "champions" ;
+      rdfs:domain ontoconcepts:League ;
+      rdfs:range ontoconcepts:SportsTeam .
+
+  ontorels:city a owl:ObjectProperty ;
+      rdfs:label "city" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:City .
+
+  ontorels:club a owl:ObjectProperty ;
+      rdfs:label "club" ;
+      rdfs:domain ontoconcepts:Athlete ;
+      rdfs:range ontoconcepts:SportsTeam .
+
+  ontorels:country a owl:ObjectProperty ;
+      rdfs:label "country" ;
+      rdfs:domain ontoconcepts:City ;
+      rdfs:range ontoconcepts:Country .
+
+  ontorels:demonym a owl:ObjectProperty ;
+      rdfs:label "demonym" ;
+      rdfs:domain ontoconcepts:Country ;
+      rdfs:range ontoconcepts:Demonym .
+
+  ontorels:fullName a owl:ObjectProperty ;
+      rdfs:label "fullName" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoliterals:string .
+
+  ontorels:ground a owl:ObjectProperty ;
+      rdfs:label "ground" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Ground .
+
+  ontorels:hasName a owl:ObjectProperty ;
+      rdfs:label "hasName" ;
+      rdfs:domain owl:Thing ;
+      rdfs:range ontoliterals:string .
+
+  ontorels:isPartOf a owl:ObjectProperty ;
+      rdfs:label "isPartOf" ;
+      rdfs:domain ontoconcepts:City ;
+      rdfs:range ontoconcepts:Country .
+
+  ontorels:language a owl:ObjectProperty ;
+      rdfs:label "language" ;
+      rdfs:domain ontoconcepts:Country ;
+      rdfs:range ontoconcepts:Language .
+
+  ontorels:leader a owl:ObjectProperty ;
+      rdfs:label "leader" ;
+      rdfs:domain ontoconcepts:Country ;
+      rdfs:range ontoconcepts:Person .
+
+  ontorels:league a owl:ObjectProperty ;
+      rdfs:label "league" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:League .
+
+  ontorels:location a owl:ObjectProperty ;
+      rdfs:label "location" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Place .
+
+  ontorels:manager a owl:ObjectProperty ;
+      rdfs:label "manager" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Person .
+
+  ontorels:mayor a owl:ObjectProperty ;
+      rdfs:label "mayor" ;
+      rdfs:domain ontoconcepts:City ;
+      rdfs:range ontoconcepts:Person .
+
+  ontorels:nickname a owl:ObjectProperty ;
+      rdfs:label "nickname" ;
+      rdfs:domain ontoconcepts:Person ;
+      rdfs:range ontoliterals:string .
+
+  ontorels:numberOfMembers a owl:ObjectProperty ;
+      rdfs:label "numberOfMembers" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoliterals:number .
+
+  ontorels:operator a owl:ObjectProperty ;
+      rdfs:label "operator" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Company .
+
+  ontorels:owner a owl:ObjectProperty ;
+      rdfs:label "owner" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Person .
+
+  ontorels:season a owl:ObjectProperty ;
+      rdfs:label "season" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Season .
+
+  ontorels:state a owl:ObjectProperty ;
+      rdfs:label "state" ;
+      rdfs:domain ontoconcepts:City ;
+      rdfs:range ontoconcepts:State .
+
+  ontorels:tenant a owl:ObjectProperty ;
+      rdfs:label "tenant" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Tenant .
+
+  ontoconcepts:Company a owl:Class ;
+      rdfs:label "Company" .
+
+  ontoconcepts:Demonym a owl:Class ;
+      rdfs:label "Demonym" .
+
+  ontoconcepts:Ground a owl:Class ;
+      rdfs:subClassOf ontoconcepts:Country ;
+      rdfs:subClassOf ontoconcepts:City ;
+      rdfs:label "Ground" .
+
+  ontoconcepts:Language a owl:Class ;
+      rdfs:label "Language" .
+
+  ontoconcepts:Season a owl:Class ;
+      rdfs:label "Season" .
+
+  ontoconcepts:State a owl:Class ;
+      rdfs:label "State" .
+
+  ontoconcepts:Tenant a owl:Class ;
+      rdfs:label "Tenant" .
+
+  ontoconcepts:Athlete a owl:Class ;
+      rdfs:subClassOf ontoconcepts:Person ;
+      rdfs:label "Athlete" .
+
+  ontoconcepts:League a owl:Class ;
+      rdfs:label "League" .
+
+  ontoconcepts:Place a owl:Class ;
+      rdfs:label "Place" .
+
+  ontoconcepts:City a owl:Class ;
+      rdfs:subClassOf ontoconcepts:Place ;
+      rdfs:label "City" .
+
+  ontoconcepts:Country a owl:Class ;
+      rdfs:label "Country" ;
+      rdfs:subClassOf ontoconcepts:Place .
+
+  ontoconcepts:Person a owl:Class ;
+      rdfs:label "Person" .
+
+  ontoconcepts:SportsTeam a owl:Class ;
+      rdfs:label "SportsTeam" ." 
+Input text: Peter Stöger is manager of FC Köln which has 50000 members and participated in the 2014 season. Output:

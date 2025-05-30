@@ -1,0 +1,219 @@
+You are a Knowledge Graph Expert. A domain ontology is provided to you, delimited by double quotes. The syntax used to describe the ontology is Turtle.
+Your input is a natural language text. The input text may or may not contain references to instances of classes provided in the ontology, together with specific relationships.
+Given the provided ontology, your task is to extract triples about the mentioned instances from the input text, as follows: 
+1. Check if a class from the provided ontology is mentioned in the input text. Search in the provided ontology for triples with the format :ClassName rdf:type owl:Class, where ClassName is the name of the class. The input text should contain the name of a class from the ontology, even if misspelled. If the class is not known, stop the process and output "None". 
+2. Each instance should be identified by an ID, using the format "Class" + "1", where "Class" is the name of the detected class and + is concatenation. Each extracted triple that is related to an instance should use the instance's ID as the subject. 
+3. A triple you always create is between the ID and the class type, using the rdf:type relationship. 
+4. Check whether any relationships were mentioned in the input text, regarding the detected class. For this, search in the ontology for the triples of form :RelationshipName rdfs:domain :ClassName, and take the relationship name as a known relationship regarding the detected class. Also, search for the triples of form :Relationship rdfs:domain owl:Thing, as owl:Thing can be used as the superclass of all classes, even if it is not directly mentioned. 
+5. For each detected relationship, extract the possible mentioned object in the input text, regarding the detected instance. 
+6. Put each triple in a JSON object, as follows: {"subject" : ID, "relationship" : value, "object" : value}. If any triple refers to another instance, add all triples you assumed of that instance too. Respond only with the JSON object(s) in a list. If no triple is detected, output "None". 
+
+Provided ontology: "
+  @prefix dc: <http://purl.org/dc/elements/1.1/> .
+  @prefix onto: <https://cenguix.github.io/Text2KGBench/ont_15_sportsteam#> .
+  @prefix owl: <http://www.w3.org/2002/07/owl#> .
+  @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+  @prefix ontorels: <https://cenguix.github.io/Text2KGBench/ont_15_sportsteam/relations#> .
+  @prefix ontoconcepts: <https://cenguix.github.io/Text2KGBench/ont_15_sportsteam/concepts#> .
+  @prefix ontoliterals: <https://cenguix.github.io/Text2KGBench/ont_15_sportsteam/literals#> .
+
+  <http://example.com/ontology> a owl:Ontology ;
+      rdfs:label "SportsTeam Ontology" ;
+      dc:creator <http://orcid.org/0000-0001-7197-0766>,
+          <http://orcid.org/0000-0003-4303-983X>,
+          <http://orcid.org/0000−0003−1707−4842> ;
+      rdfs:comment "An ontology used in the Text2KGBench, modified for our work." ;
+      owl:versionIRI onto:v1 .
+
+  ontorels:birthPlace a owl:ObjectProperty ;
+      rdfs:label "birthPlace" ;
+      rdfs:domain ontoconcepts:Person ;
+      rdfs:range ontoconcepts:Place .
+
+  ontorels:capital a owl:ObjectProperty ;
+      rdfs:label "capital" ;
+      rdfs:domain ontoconcepts:Country ;
+      rdfs:range ontoconcepts:City .
+
+  ontorels:chairmanTitle a owl:ObjectProperty ;
+      rdfs:label "chairmanTitle" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoliterals:string .
+
+  ontorels:champions a owl:ObjectProperty ;
+      rdfs:label "champions" ;
+      rdfs:domain ontoconcepts:League ;
+      rdfs:range ontoconcepts:SportsTeam .
+
+  ontorels:city a owl:ObjectProperty ;
+      rdfs:label "city" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:City .
+
+  ontorels:club a owl:ObjectProperty ;
+      rdfs:label "club" ;
+      rdfs:domain ontoconcepts:Athlete ;
+      rdfs:range ontoconcepts:SportsTeam .
+
+  ontorels:country a owl:ObjectProperty ;
+      rdfs:label "country" ;
+      rdfs:domain ontoconcepts:City ;
+      rdfs:range ontoconcepts:Country .
+
+  ontorels:demonym a owl:ObjectProperty ;
+      rdfs:label "demonym" ;
+      rdfs:domain ontoconcepts:Country ;
+      rdfs:range ontoconcepts:Demonym .
+
+  ontorels:fullName a owl:ObjectProperty ;
+      rdfs:label "fullName" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoliterals:string .
+
+  ontorels:ground a owl:ObjectProperty ;
+      rdfs:label "ground" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Ground .
+
+  ontorels:hasName a owl:ObjectProperty ;
+      rdfs:label "hasName" ;
+      rdfs:domain owl:Thing ;
+      rdfs:range ontoliterals:string .
+
+  ontorels:isPartOf a owl:ObjectProperty ;
+      rdfs:label "isPartOf" ;
+      rdfs:domain ontoconcepts:City ;
+      rdfs:range ontoconcepts:Country .
+
+  ontorels:language a owl:ObjectProperty ;
+      rdfs:label "language" ;
+      rdfs:domain ontoconcepts:Country ;
+      rdfs:range ontoconcepts:Language .
+
+  ontorels:leader a owl:ObjectProperty ;
+      rdfs:label "leader" ;
+      rdfs:domain ontoconcepts:Country ;
+      rdfs:range ontoconcepts:Person .
+
+  ontorels:league a owl:ObjectProperty ;
+      rdfs:label "league" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:League .
+
+  ontorels:location a owl:ObjectProperty ;
+      rdfs:label "location" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Place .
+
+  ontorels:manager a owl:ObjectProperty ;
+      rdfs:label "manager" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Person .
+
+  ontorels:mayor a owl:ObjectProperty ;
+      rdfs:label "mayor" ;
+      rdfs:domain ontoconcepts:City ;
+      rdfs:range ontoconcepts:Person .
+
+  ontorels:nickname a owl:ObjectProperty ;
+      rdfs:label "nickname" ;
+      rdfs:domain ontoconcepts:Person ;
+      rdfs:range ontoliterals:string .
+
+  ontorels:numberOfMembers a owl:ObjectProperty ;
+      rdfs:label "numberOfMembers" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoliterals:number .
+
+  ontorels:operator a owl:ObjectProperty ;
+      rdfs:label "operator" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Company .
+
+  ontorels:owner a owl:ObjectProperty ;
+      rdfs:label "owner" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Person .
+
+  ontorels:season a owl:ObjectProperty ;
+      rdfs:label "season" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Season .
+
+  ontorels:state a owl:ObjectProperty ;
+      rdfs:label "state" ;
+      rdfs:domain ontoconcepts:City ;
+      rdfs:range ontoconcepts:State .
+
+  ontorels:tenant a owl:ObjectProperty ;
+      rdfs:label "tenant" ;
+      rdfs:domain ontoconcepts:SportsTeam ;
+      rdfs:range ontoconcepts:Tenant .
+
+  ontoconcepts:Company a owl:Class ;
+      rdfs:label "Company" .
+
+  ontoconcepts:Demonym a owl:Class ;
+      rdfs:label "Demonym" .
+
+  ontoconcepts:Ground a owl:Class ;
+      rdfs:subClassOf ontoconcepts:Country ;
+      rdfs:subClassOf ontoconcepts:City ;
+      rdfs:label "Ground" .
+
+  ontoconcepts:Language a owl:Class ;
+      rdfs:label "Language" .
+
+  ontoconcepts:Season a owl:Class ;
+      rdfs:label "Season" .
+
+  ontoconcepts:State a owl:Class ;
+      rdfs:label "State" .
+
+  ontoconcepts:Tenant a owl:Class ;
+      rdfs:label "Tenant" .
+
+  ontoconcepts:Athlete a owl:Class ;
+      rdfs:subClassOf ontoconcepts:Person ;
+      rdfs:label "Athlete" .
+
+  ontoconcepts:League a owl:Class ;
+      rdfs:label "League" .
+
+  ontoconcepts:Place a owl:Class ;
+      rdfs:label "Place" .
+
+  ontoconcepts:City a owl:Class ;
+      rdfs:subClassOf ontoconcepts:Place ;
+      rdfs:label "City" .
+
+  ontoconcepts:Country a owl:Class ;
+      rdfs:label "Country" ;
+      rdfs:subClassOf ontoconcepts:Place .
+
+  ontoconcepts:Person a owl:Class ;
+      rdfs:label "Person" .
+
+  ontoconcepts:SportsTeam a owl:Class ;
+      rdfs:label "SportsTeam" ." 
+ 
+Example: 
+Input text: Athlete Marco Reus was born in Germany, and currently plays for LA Galaxy. He is nicknamed Marcinho. 
+1. In the ontology, 14 classes are found: "SportsTeam", "Athlete", "Country", "City", "Person", "Place", "Demonym", "League", "Tenant", "Language", "Season", "State", "Ground", "Company". In the input text, the word "Athlete" may refer to the class Athlete. This class is also a subclass of Person. Depending on the detected relationships domains, we have to decide whether Person or Athlete is the right choice. 
+2. The ID of the instance is the name of the class concatenated with "1", therefore the final ID can be either Athlete1 or Person1. 
+3. The type relationship creates either the triple :Athlete1 rdf:type :Athlete or :Person1 rdf:type :Person. 
+4. Given triples where the rdfs:domain is :Athlete, :Thing or :Person (because the Athlete class is a subclass of Person), specific relationships are club, hasName, nickname and birthPlace. Within the input text, there are keywords like "born in", "plays for", and "nicknamed" that may lead to the following relationships: club (because playing for hints that the player is part of a football club), nickname and birthPlace. Also, we have his name which leads to the hasName relationship. 
+Revision to step 2. We can now say that the instance is of type Person, because the domains of most relationships it is part of are requesting Person instances. 
+5. The possible object for each relationship may be words that semantically and/or syntactically relate to the relationship keywords. Therefore, we can extract: for hasName the words "Marco Reus", for club the words "LA Galaxy", for nickname the word "Marcinho", and for birthPlace the word "Germany". 
+6. For club, the ontology specifies a SportsTeam instance, therefore a new instance of type SportsTeam with ID SportsTeam1 is created, and the object "LA Galaxy" may be the name of it. For birthPlace, the ontology specifies a Place instance. We can see that the detected object is "Germany" which is known to be a country. In the ontology, we can see that Country is a subclass of Place, therefore we can use Country as its class. Depending on the other related relationships, Place might have been the better choice, similar to how we have selected Person over Athlete. A new instance of type Country with ID Country1 is created, and the object "Germany" may be the name of it. Each triple has to be put in a JSON object respecting the provided template. All JSON objects must be put in a list. 
+Output: [{"subject": "Country1", "relationship": "rdf:type", "object": "Country"},
+          {"subject": "Country1", "relationship": "hasName", "object": "Germany"},
+          {"subject": "Person1", "relationship": "rdf:type", "object": "Person"},
+          {"subject": "Person1", "relationship": "hasName", "object": "Marco Reus"},
+          {"subject": "Person1", "relationship": "birthPlace", "object": "Country1"},
+          {"subject": "SportsTeam1", "relationship": "rdf:type", "object": "SportsTeam"},
+          {"subject": "SportsTeam1", "relationship": "hasName", "object": "LA Galaxy"},
+          {"subject": "Person1", "relationship": "club", "object": "SportsTeam1"},
+          {"subject": "Person1", "relationship": "nickname", "object": "Marcinho"}]
+ 
+ Input text: Peter Stöger is manager of FC Köln which has 50000 members and participated in the 2014 season. Output:
