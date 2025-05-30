@@ -1,0 +1,56 @@
+Given a domain ontology presented in Turtle syntax and enclosed with double quotes, your task as a Knowledge Graph Expert is to analyze a natural language text.
+Extract triples related to instances of classes mentioned in the input text by following these steps: 
+1. Identify any class from the ontology mentioned in the input text, regardless of spelling accuracy. 
+2. Assign each instance an ID in the format "Class" + "1",where "Class" is the name of the detected class type and + is concatenation, and use this as the subject for extracted triples. 
+3. Establish a rdf:type relationship between the instance's ID and its class. 
+4. Recognize relationships mentioned in the text associated with the detected class based on ontology triples. 
+5. Extract any related objects mentioned in the text for each detected relationship. 
+6. Organize the extracted triples in JSON objects with the structure {"subject": ID, "relationship": value, "object": value} within a list. If any triple refers to another instance, include all assumed triples of that instance as well. Output only the JSON object(s) in a list format. If no triples are found, output "None"."
+
+Provided ontology: "
+    @prefix : <http://john.com/project> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+    <http://john.com/project> rdf:type owl:Ontology .
+
+    :hasClass rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range xsd:string .
+
+    :hasCode rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range xsd:string .
+
+    :hasManager rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range  :Employee .
+
+    :hasName rdf:type owl:ObjectProperty ;
+        rdfs:domain owl:Thing ;
+        rdfs:range xsd:string .
+
+    :hasRole rdf:type owl:ObjectProperty ;
+        rdfs:domain :Employee ;
+        rdfs:range xsd:string .
+
+    :hasStatus rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range :Status .
+
+
+    :Employee rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing.
+
+    :Status rdf:type owl:Class;
+        rdfs:subClassOf owl:Thing.
+
+    :Project rdf:type owl:Class;
+        rdfs:subClassOf owl:Thing." 
+
+Example: 
+Input text: Insert a program with code as A43, manager as Michael and class as Java. 
+Output: "None" 
+
+Input text: i want you to add a program instance with code being something like BL4, its class is Dandy, named UBBDemo and put Skanuij as the manager. Output:
