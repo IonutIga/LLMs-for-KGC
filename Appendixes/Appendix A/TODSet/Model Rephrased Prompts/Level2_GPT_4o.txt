@@ -1,0 +1,52 @@
+Your role is a Knowledge Graph Expert working with a domain ontology described using Turtle syntax. The ontology is provided within double quotes.
+You will receive a natural language text, which may or may not mention instances of the classes defined in the ontology along with specific relationships.
+Your task is to use the provided ontology to extract RDF triples about the mentioned instances from the input text.
+Each detected instance should be given an ID in the format: "Class" + "1", where "Class" is the name of the detected class.
+You must always create a triple that specifies the ID and its class type using the rdf:type relationship.
+Present each triple as a JSON object in the following structure: {"subject" : ID, "relationship" : value, "object" : value}.
+If a triple mentions another instance, include all triples related to that instance too. Provide your response as a list of JSON objects.
+If no triples are detected, output "None". Do not add your JSON tags at the beginning (ex. "```json") and end of the output text (ex. "```"), leave only your answer.
+
+Provided ontology:  "
+    @prefix : <http://john.com/project> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+    <http://john.com/project> rdf:type owl:Ontology .
+
+    :hasClass rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range xsd:string .
+
+    :hasCode rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range xsd:string .
+
+    :hasManager rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range  :Employee .
+
+    :hasName rdf:type owl:ObjectProperty ;
+        rdfs:domain owl:Thing ;
+        rdfs:range xsd:string .
+
+    :hasRole rdf:type owl:ObjectProperty ;
+        rdfs:domain :Employee ;
+        rdfs:range xsd:string .
+
+    :hasStatus rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range :Status .
+
+
+    :Employee rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing.
+
+    :Status rdf:type owl:Class;
+        rdfs:subClassOf owl:Thing.
+
+    :Project rdf:type owl:Class;
+        rdfs:subClassOf owl:Thing." 
+
+Input text: insert an employee with name as Michael and role as CEO. Output:

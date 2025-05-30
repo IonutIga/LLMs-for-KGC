@@ -1,0 +1,54 @@
+You are an expert in Knowledge Graphs. You have been given a domain ontology within double quotes, described using the Turtle syntax.
+Your task is to analyze a natural language input text, which may or may not refer to instances of classes and relationships described in the ontology.
+Using the ontology provided, your job is to extract triples about the instances mentioned in the input text as follows: 
+1. Determine if any class from the ontology is mentioned in the input text. Look in the ontology for triples like :ClassName rdf:type owl:Class, where ClassName is the class name. The class name in the input text could be misspelled. If no known class is mentioned, output "None". 
+2. Assign an ID to each identified instance using "Class" + "1", where "Class" is the detected class name. 
+3. Always create a triple between the ID and the class type using the rdf:type relationship. 
+4. Identify any mentioned relationships from the input text regarding the identified class. Search for triples like :RelationshipName rdfs:domain :ClassName or :Relationship rdfs:domain owl:Thing in the ontology, where owl:Thing represents the superclass of all classes. 
+5. For each detected relationship, extract the mentioned object in the input text with respect to the identified instance. 
+6. Present each triple as a JSON object with the format: {"subject" : ID, "relationship" : value, "object" : value}. If a triple refers to another instance, include all triples for that instance as well. If no triples are detected, output "None".
+Do not add your JSON tags at the beginning (ex. "```json") and end of the output text (ex. "```"), leave only your answer.
+
+Provided ontology: "
+    @prefix : <http://john.com/project> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+    <http://john.com/project> rdf:type owl:Ontology .
+
+    :hasClass rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range xsd:string .
+
+    :hasCode rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range xsd:string .
+
+    :hasManager rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range  :Employee .
+
+    :hasName rdf:type owl:ObjectProperty ;
+        rdfs:domain owl:Thing ;
+        rdfs:range xsd:string .
+
+    :hasRole rdf:type owl:ObjectProperty ;
+        rdfs:domain :Employee ;
+        rdfs:range xsd:string .
+
+    :hasStatus rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range :Status .
+
+
+    :Employee rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing.
+
+    :Status rdf:type owl:Class;
+        rdfs:subClassOf owl:Thing.
+
+    :Project rdf:type owl:Class;
+        rdfs:subClassOf owl:Thing." 
+
+Input text: insert an employee with name as Michael and role as CEO. Output:

@@ -1,0 +1,50 @@
+Imagine you are an expert in Knowledge Graphs. You are given a specific ontology in Turtle syntax, and it is enclosed in double quotes.
+The task involves processing a natural language text to extract data in the form of triples, which refer to the given classes and relationships in the ontology.
+Each identified instance should be denoted by a unique ID in the format "Class" + "1", where "Class" is the class name and + denotes concatenation.
+The extracted triples must be formatted as JSON objects like this: {"subject" : ID, "relationship" : value, "object" : value}. 
+If a triple involves another instance, include all related triples. Only provide the JSON objects in a list as the output. 
+If no triples are found, respond with "None". Do not add your JSON tags at the beginning (ex. "```json") and end of the output text (ex. "```"), leave only your answer.
+
+Here is the provided ontology: "
+    @prefix : <http://john.com/project> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+    <http://john.com/project> rdf:type owl:Ontology .
+
+    :hasClass rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range xsd:string .
+
+    :hasCode rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range xsd:string .
+
+    :hasManager rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range  :Employee .
+
+    :hasName rdf:type owl:ObjectProperty ;
+        rdfs:domain owl:Thing ;
+        rdfs:range xsd:string .
+
+    :hasRole rdf:type owl:ObjectProperty ;
+        rdfs:domain :Employee ;
+        rdfs:range xsd:string .
+
+    :hasStatus rdf:type owl:ObjectProperty ;
+        rdfs:domain :Project ;
+        rdfs:range :Status .
+
+
+    :Employee rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing.
+
+    :Status rdf:type owl:Class;
+        rdfs:subClassOf owl:Thing.
+
+    :Project rdf:type owl:Class;
+        rdfs:subClassOf owl:Thing." 
+
+Input text: insert an employee with name as Michael and role as CEO. Output:
