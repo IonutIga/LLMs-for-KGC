@@ -1,0 +1,258 @@
+
+---template strict True, triple strict True---
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1 
+ accuracy: 0.15;
+ precision: 0.19;
+ recall: 0.15;
+ f1 score: 0.17;
+ penalize: 0.0; 
+ nr of instances: 375; 
+ incorrect output format: 223; 
+ error: 0
+
+---template strict True, triple strict True---
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_1 
+ accuracy: 0.05;
+ precision: 0.08;
+ recall: 0.05;
+ f1 score: 0.06;
+ penalize: 0.0; 
+ nr of instances: 75; 
+ incorrect output format: 47; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_2 
+ accuracy: 0.26;
+ precision: 0.31;
+ recall: 0.26;
+ f1 score: 0.28;
+ penalize: 0.0; 
+ nr of instances: 75; 
+ incorrect output format: 29; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_3 
+ accuracy: 0.09;
+ precision: 0.16;
+ recall: 0.09;
+ f1 score: 0.12;
+ penalize: 0.0; 
+ nr of instances: 75; 
+ incorrect output format: 46; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_4.1 
+ accuracy: 0.36;
+ precision: 0.41;
+ recall: 0.36;
+ f1 score: 0.38;
+ penalize: 0.0; 
+ nr of instances: 75; 
+ incorrect output format: 26; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_4.2 
+ accuracy: 0.0;
+ precision: 0.0;
+ recall: 0.0;
+ f1 score: 0;
+ penalize: 0.0; 
+ nr of instances: 75; 
+ incorrect output format: 75; 
+ error: 0
+
+
+---template strict True, triple strict True---
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_SportsTeam 
+ accuracy: 0.19;
+ precision: 0.24;
+ recall: 0.19;
+ f1 score: 0.21;
+ penalize: 0.0; 
+ nr of instances: 220; 
+ incorrect output format: 117; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_Place 
+ accuracy: 0.16;
+ precision: 0.18;
+ recall: 0.16;
+ f1 score: 0.17;
+ penalize: 0.0; 
+ nr of instances: 10; 
+ incorrect output format: 5; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_Person 
+ accuracy: 0.19;
+ precision: 0.24;
+ recall: 0.19;
+ f1 score: 0.21;
+ penalize: 0.0; 
+ nr of instances: 50; 
+ incorrect output format: 31; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_Country 
+ accuracy: 0.01;
+ precision: 0.02;
+ recall: 0.01;
+ f1 score: 0.01;
+ penalize: 0.0; 
+ nr of instances: 25; 
+ incorrect output format: 20; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_Athlete 
+ accuracy: 0.05;
+ precision: 0.06;
+ recall: 0.05;
+ f1 score: 0.05;
+ penalize: 0.0; 
+ nr of instances: 45; 
+ incorrect output format: 35; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_League 
+ accuracy: 0.07;
+ precision: 0.12;
+ recall: 0.07;
+ f1 score: 0.09;
+ penalize: 0.0; 
+ nr of instances: 25; 
+ incorrect output format: 15; 
+ error: 0
+
+
+---template strict False, triple strict False---
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1 
+ accuracy: 0.3;
+ precision: 0.43;
+ recall: 0.3;
+ f1 score: 0.35;
+ penalize: 0.04; 
+ nr of instances: 375; 
+ incorrect output format: 0; 
+ error: 0
+
+
+---template strict False, triple strict False---
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_1 
+ accuracy: 0.15;
+ precision: 0.25;
+ recall: 0.15;
+ f1 score: 0.19;
+ penalize: 0.05; 
+ nr of instances: 75; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_2 
+ accuracy: 0.42;
+ precision: 0.5;
+ recall: 0.42;
+ f1 score: 0.46;
+ penalize: 0.03; 
+ nr of instances: 75; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_3 
+ accuracy: 0.25;
+ precision: 0.43;
+ recall: 0.25;
+ f1 score: 0.32;
+ penalize: 0.05; 
+ nr of instances: 75; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_4.1 
+ accuracy: 0.52;
+ precision: 0.62;
+ recall: 0.52;
+ f1 score: 0.57;
+ penalize: 0.03; 
+ nr of instances: 75; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_4.2 
+ accuracy: 0.15;
+ precision: 0.37;
+ recall: 0.15;
+ f1 score: 0.21;
+ penalize: 0.04; 
+ nr of instances: 75; 
+ incorrect output format: 0; 
+ error: 0
+
+
+---template strict False, triple strict False---
+
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_SportsTeam 
+ accuracy: 0.34;
+ precision: 0.49;
+ recall: 0.34;
+ f1 score: 0.4;
+ penalize: 0.03; 
+ nr of instances: 220; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_Place 
+ accuracy: 0.23;
+ precision: 0.26;
+ recall: 0.23;
+ f1 score: 0.24;
+ penalize: 0.02; 
+ nr of instances: 10; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_Person 
+ accuracy: 0.34;
+ precision: 0.5;
+ recall: 0.34;
+ f1 score: 0.4;
+ penalize: 0.04; 
+ nr of instances: 50; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_Country 
+ accuracy: 0.2;
+ precision: 0.32;
+ recall: 0.2;
+ f1 score: 0.25;
+ penalize: 0.05; 
+ nr of instances: 25; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_Athlete 
+ accuracy: 0.17;
+ precision: 0.24;
+ recall: 0.17;
+ f1 score: 0.2;
+ penalize: 0.05; 
+ nr of instances: 45; 
+ incorrect output format: 0; 
+ error: 0
+
+Model: mistralai/Mixtral-8x7B-Instruct-v0.1_League 
+ accuracy: 0.18;
+ precision: 0.37;
+ recall: 0.18;
+ f1 score: 0.24;
+ penalize: 0.04; 
+ nr of instances: 25; 
+ incorrect output format: 0; 
+ error: 0
+
